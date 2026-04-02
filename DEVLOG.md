@@ -1,3 +1,13 @@
+Tasks
+
+- [ ] interface with BLE
+  - phone
+  - phone app
+  - seeeduino
+- [ ] record sound from mic
+- [ ] store audio from mic
+- [ ] playback audio
+
 ### 04/01/2026
 
 10:37 PM
@@ -52,3 +62,22 @@ Okay I need to charge this laptop
 Got everything soldered so I can connect it to a breadboard, now to see what pins go where
 
 I do need to test program this Seeduino real quick
+
+11:09 PM
+
+Oh right nRF connect nice
+
+11:11 PM
+
+Oh damn... that was cool, connected it to 5V
+
+Flashing red light, scan for it with nRF app, connected, solid red
+
+11:38 PM
+
+I'm done for now, some good progress though
+
+I found these small momentary switches would be good for the on-off, maybe a single tactile button for programming and a status LED
+
+Has to be (relatively) waterproof
+
