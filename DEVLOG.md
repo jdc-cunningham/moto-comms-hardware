@@ -8,6 +8,22 @@ Tasks
 - [ ] store audio from mic
 - [ ] playback audio
 
+### 04/02/2026
+
+12:42 AM
+
+Doing some reading while watching TV
+
+So yeah the Seeeduino is not gonna cut it
+
+I ordered some ESP32s that have DACs and will do a2dp to stream audio from BT to speakers
+
+Also got these amps
+
+Once all this is wired together/working I'll design a box for it with the two speakers and single mic extending so they can be put inside a helmet
+
+---
+
 ### 04/01/2026
 
 10:37 PM
