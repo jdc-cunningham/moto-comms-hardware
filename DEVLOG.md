@@ -60,6 +60,16 @@ So it must be the internal DAC is not good... I need to use another way to drive
 
 <img src="./devlog-images/new-setup.png"/>
 
+11:40 PM
+
+Well... I ordered some DACs PCM5102 (a) which only because I want them tomorrow
+
+Although I'm not sure what time tomorrow they'll get in
+
+There's something about jumpers I gotta look at
+
+But I'll work on the mic stuff while I wait for that DAC
+
 ---
 
 ### 04/02/2026
