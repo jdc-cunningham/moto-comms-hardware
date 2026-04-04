@@ -1,9 +1,12 @@
-void setup() {
-  // put your setup code here, to run once:
+#include "AudioTools.h"
+#include "BluetoothA2DPSink.h"
 
+AnalogAudioStream out;
+BluetoothA2DPSink a2dp_sink(out);
+
+void setup() {
+  a2dp_sink.start("MotoComms");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
 }

@@ -8,6 +8,60 @@ Tasks
 - [ ] store audio from mic
 - [ ] playback audio
 
+### 04/03/2026
+
+Funny I'm looking at this ESP32 module I'm like great wtf do I do now
+
+9:40 PM
+
+I'm looking at this so far it looks stright forward
+
+https://github.com/pschatzmann/ESP32-A2DP
+
+But I haven't produced sound yet, what I'm wondering about is the mic too how do I take the mic sound send it through BT to the phone
+
+9:44 PM
+
+Wow this ESP32 library is massive for Arduino IDE, just waiting here for stuff to install
+
+9:51 PM
+
+Added these two libraries by zip into Arduino IDE
+
+https://github.com/pschatzmann/arduino-audio-tools
+
+https://github.com/pschatzmann/ESP32-A2DP
+
+10:06 PM
+
+Driver problem
+
+10:10 PM
+
+Alright found the driver from silicon labs
+
+Device manager, find the CP210x driver thing, select it, update driver, point it to the extracted driver
+
+11:13 PM
+
+So I've been playing around with this for a bit
+
+It's pretty amazing you just flash this and the bluetooth works, it's putting audio out
+
+The problem is the static damn...
+
+Even had me put together a crude RC filter
+
+But I think there's something else... I am using an amp it's the PAM8493
+
+I'm not sure if my speakers are too puny/this amp is too powerful... but driving the speakers directly also sounds terrible
+
+So it must be the internal DAC is not good... I need to use another way to drive the speakers if possible
+
+<img src="./devlog-images/new-setup.png"/>
+
+---
+
 ### 04/02/2026
 
 12:42 AM
