@@ -34,6 +34,14 @@ What I'm after is hands free profile, it's different
 
 Will need to do more research
 
+This right here was particularly interesting
+
+https://github.com/pschatzmann/ESP32-A2DP/discussions/283
+
+https://github.com/jokubasver/saab-93NG-bluetooth-aux/blob/master/esp32_a2dp_receiver/src/main.cpp
+
+
+
 ---
 
 ### 04/03/2026
