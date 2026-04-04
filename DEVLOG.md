@@ -20,7 +20,19 @@ Cool got a working mic with Atomic14's code
 
 I feel like I can just plug it into the a2dp code and verify by recording a video on my phone no mobile app needed
 
+12:06 PM
 
+Okay... so I guess that makes sense, if you use the ESP32 as a source, phone can't find it since phone isn't a sink (lol)
+
+I'm not sure how to send mic data bidirectionally
+
+12:12 PM
+
+Damn... okay yeah this won't work, A2DP is designed for sending audio one way
+
+What I'm after is hands free profile, it's different
+
+Will need to do more research
 
 ---
 
