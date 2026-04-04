@@ -8,6 +8,22 @@ Tasks
 - [ ] store audio from mic
 - [ ] playback audio
 
+### 04/04/2026
+
+10:56 AM
+
+Back on, working on the mic right now while I wait for the DAC
+
+11:13 AM
+
+Cool got a working mic with Atomic14's code
+
+I feel like I can just plug it into the a2dp code and verify by recording a video on my phone no mobile app needed
+
+
+
+---
+
 ### 04/03/2026
 
 Funny I'm looking at this ESP32 module I'm like great wtf do I do now
