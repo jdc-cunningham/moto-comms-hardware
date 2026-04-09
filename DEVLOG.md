@@ -8,6 +8,18 @@ Tasks
 - [ ] store audio from mic
 - [ ] playback audio
 
+### 04/08/2026
+
+7:52 PM
+
+Back on late start
+
+Working on connecting the external DAC (PCM5102A)
+
+8:29 PM
+
+No sound yet... interesting the mic and speaker would share the same word select pin
+
 ### 04/04/2026
 
 10:56 AM
@@ -39,8 +51,6 @@ This right here was particularly interesting
 https://github.com/pschatzmann/ESP32-A2DP/discussions/283
 
 https://github.com/jokubasver/saab-93NG-bluetooth-aux/blob/master/esp32_a2dp_receiver/src/main.cpp
-
-
 
 ---
 
