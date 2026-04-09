@@ -20,6 +20,16 @@ Working on connecting the external DAC (PCM5102A)
 
 No sound yet... interesting the mic and speaker would share the same word select pin
 
+9:08 PM
+
+This guide worked
+
+https://www.makerguides.com/audio-with-pam8403-pcm5102-and-esp32/
+
+Nice clear sound damn
+
+I still have to figure out the hands free profile part and I did test the mic connection, I saw a wave form in the serial plotter
+
 ### 04/04/2026
 
 10:56 AM
