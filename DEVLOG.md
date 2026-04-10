@@ -1,12 +1,7 @@
 Tasks
 
-- [ ] interface with BLE
-  - phone
-  - phone app
-  - seeeduino
-- [ ] record sound from mic
-- [ ] store audio from mic
-- [ ] playback audio
+- [ ] get HFP profile working
+- [ ] assemble hardware
 
 ### 04/10/2026
 
@@ -98,7 +93,157 @@ I'll actually solder it together along with the switch, boost converter, bms and
 
 <img src="./devlog-images/wired-up.png"/>
 
+2:21 PM
 
+Interesting it says "All done you can now run export.ps1"
+
+Cool now says I can now compile ESP-IDF projects
+
+Oh... so maybe maybe the root folder of atomic14's repo is the "project" folder to run make in
+
+unless... I put it inside a project folder in esp-idf... will find out
+
+2:28 PM
+
+I don't have make, from what I can tell atomic14's stuff was made in unix/non-windows although in some comments he's got a capital /Users/... directory pattern suggesting windows
+
+Anyway installing make with chocolatey
+
+Well past that part... now don't know where I'm supposed to actually run make
+
+2:34 PM
+
+Okay I'm continuing along with the steps here
+
+https://github.com/espressif/esp-idf?tab=readme-ov-file#configuring-the-project
+
+So maybe this is where you inject atomic14's code?...
+
+okay yeah looking at one of the example projects it has a similar structure regarding CMakeLists.txt and main folder
+
+2:37 PM
+
+Ooh it's doing stuff
+
+2:39 PM
+
+Dude no way... maybe I have it already...
+
+Still cloning submodules... what I kind of skipped/didn't do anything on is the bluekitchen part... will see
+
+Maybe it's already done/included in atomic14's code
+
+2:46 PM
+
+Ooh it says configuration done... will it work or am I missing a bunch of stuff still?
+
+2:48 PM
+
+Here we go please work... lol
+
+<img src="./devlog-images/building.png"/>
+
+2:50 PM
+
+Ooh I got scared, it was stuck on this line for a bit
+
+`[428/1023] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj`
+
+Stuck on this one too
+
+`[533/1023] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp_flash_api.c.obj`
+
+It's weird the moment I copy it by right-clicking, moves forward
+
+2:54 PM
+
+No....
+
+`fatal error: hci.h: No such file or directory`
+
+2:56 PM
+
+Adding this
+
+REQUIRES bt to endo f CMakeLists.txt idf_component_register argument
+
+Did not fix it
+
+Okay it looks like that file comes from bluekitchen so yeah I do need to do that... but how...
+
+3:00 PM
+
+What's interesting is btstack has the same structure regarding CMake... main...
+
+3:07 PM
+
+I was looking through the kitchen repo and I think I know what I have to do, I have to include the 32 port thing as this project gets built
+
+3:21 PM
+
+Failing... I set the env in powershell but idf.py build doesn't see it...
+
+It seems I could move the atomic14 code into btstack esp32 port folder since there is the "project skeleton" folder
+
+3:23 PM
+
+Alright made a new folder in there and building...
+
+3:30 PM
+
+Damn it still can't find hci.h
+
+3:37 PM
+
+(Fahhhhh sound effect)
+
+Damn... still stuck
+
+3:41 PM
+
+From the CMakeLists.txt I can see the IDF path set in there... which mine doesn't match atomic14 but I corrected it
+
+So it seems you run `idf.py build` in the root of atomic14 repo... but still not sure what to do about btstack
+
+3:48 PM
+
+Lmao you tease... counting up to 1300 build steps... FAILURE!!!
+
+3:50 PM
+
+I know there is literally a note that says "do not copy" lmao but I'm gonna try it (move btstack into esp-idf)
+
+Nope still can't find hci.h damn, it's in the btstack folder, trying to figure out how to include it in the build
+
+4:00 PM
+
+I saw something where you run esp-idf set-target and it resets sdkconfig so it seems you are supposed to run the idf.py build command at this repo's root path eg. same level as main folder
+
+btstack is in the esp-idf components folder... so I don't know why it's not being included in the build
+
+4:10 PM
+
+Ugh... I completely f'd it, let me start over, re-clone stuff fresh
+
+I think I'll clone esp-idf by itself, get that setup
+
+Then I'll clone the btstack repo and in there clone the atomic14 repo which I believe is/as probably mentioned, based on the sample project folder in the esp32 port
+
+Which it's alright I just need to bring over the MAC address I found
+
+4:29 PM
+
+Back on... was waiting for the download seems I got throttled, had to try again
+
+Was also daydreaming about actually assembling this hardware
+
+I figure I'll socket the ESP32 but not the rest of the components.
+
+Some will just be sitting ontop of a non-conductive layer like the charging board
+
+<img src="./devlog-images/assemble.png"/>
+
+Still not compiled
 
 ---
 
