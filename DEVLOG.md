@@ -245,6 +245,59 @@ Some will just be sitting ontop of a non-conductive layer like the charging boar
 
 Still not compiled
 
+4:44 PM
+
+So I git cloned esp-idf into its own folder
+
+Did the install.ps1 and export.ps1 scripts
+
+Cloned btstack into its own folder
+
+Cloned atomic14 hfp repo into btstack/port/esp32
+
+Then got the MAC address for the STM32 BT, updated `hfp_hf_demo.c` constant as noted in atomic14 repo
+
+Update path in CMakeLists.txt (one outside of main) to reflect esp-idf path
+
+set idf target to esp32 although it's correctly guessed
+
+That initializes the submodules (wait)
+
+4:53 PM
+
+OMG... after all that, same problem lmao hci.h
+
+5:52 PM
+
+I've made some progress, a new error!
+
+Priv requires esp_driver_gpio
+
+I did that
+
+5:57 PM
+
+And another esp_driver_uart
+
+Sitting here doing component layout as I try builds over and over
+
+<img src="./devlog-images/layout.png"/>
+
+Not worried about cases right now, just make it work
+
+Push-lock on-off button top right
+
+3 of these components are mostly 1-sided so they'll just sit on a non-conductive pad of double-sided foam tape, with hotglue to secure em in place
+
+6:04 PM
+
+SHhhhiiiiiiiiiiii
+
+i2s legacy... I probably should have considered cloning the same version stuff he used 4 years ago
+
+Yeah... I think I have to do that... vs. trying to patch things... there is a migration guide apparently
+
+
 ---
 
 ### 04/09/2026
