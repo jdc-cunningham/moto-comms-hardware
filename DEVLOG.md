@@ -297,6 +297,19 @@ i2s legacy... I probably should have considered cloning the same version stuff h
 
 Yeah... I think I have to do that... vs. trying to patch things... there is a migration guide apparently
 
+6:11 PM
+
+Alright traveling back in time...
+
+esp-idf version 4.3
+
+and btstack version 1.4.1
+
+6:12 PM
+
+Gonna take a break eat a snacky snack
+
+
 
 ---
 
