@@ -34,6 +34,18 @@ It could be made better if it's not much more work
 
 I'm trying to get this done by this weekend and I have to assemble two units which isn't too hard of work
 
+10:10 PM
+
+Side tracked by my agent gui project
+
+So funny how easy it is to type on this SB3 vs. the ASUS 900 Eee PC
+
+Anyway so the thing above is not as straightforward as I thought, although it is a great resource/shows me that it is possible
+
+I just need to put more time into it, I'm not interested in the wifi/mic only aspect
+
+I need that POS demonstrated that was used for a phone call that works for my use case and also more intuitive to connect to BT than WiFi
+
 ---
 
 ### 04/08/2026
