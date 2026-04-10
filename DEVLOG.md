@@ -8,6 +8,100 @@ Tasks
 - [ ] store audio from mic
 - [ ] playback audio
 
+### 04/10/2026
+
+1:06 PM
+
+Alright took a half day at work, back on this
+
+1:11 PM
+
+Got the mic wired on based on atomic14's test code which worked in the past (serial plotter responding)
+
+1:21 PM
+
+I cloned this code and I'm reading through it at least it's in C so I can understand it
+
+https://github.com/atomic14/esp32-hsp-hf/tree/main
+
+I didn't want the WiFi part so I was looking into that
+
+Right now I just want to get his code working, bind it to my pins
+
+1:24 PM
+
+Funny I was trying to run it in Arduino like nope... use that Makefile boy
+
+1:30 PM
+
+One problem I see with this code is the mac address being hardcoded, that won't fly
+
+Probably need to do some kind of handshake/binding thing on first connection
+
+I'll need to see if say with the nRF app if I can get a mac address
+
+I'm not sure if this code is refering to the laptop's mac address or the BT mic's mac address
+
+1:34 PM
+
+Doing the ESP-IDF install
+
+1:47 PM
+
+Going through ESP-IDF installation
+
+Looking at the sdkconfig file looks like it does have wifi
+
+I'm still stuck on that mac part... I don't get why if it's for the mic/speaker itself then shouldn't that be arbitrary/your choice... it seems like you're picking the phone/computer's mac address
+
+1:52 PM
+
+It seems I can flash a program through Arduino on the STM32 to dump its BT mac address
+
+1:53 PM
+
+Says ESP-IDF successfully installed... I feel like it opened Powershell but it was blank... closed that window and the installation window said "finished install..." hmm.
+
+I still have to do the bluekitchen part
+
+Let me do this mac address real quick
+
+Yes sir I got it... nice, I'll just mark the STM32's with 1 and 2 to keep track
+
+2:02 PM
+
+Man this documentation is not great sorry to say but still a good resource, hopefully I can piece this together
+
+I have a feeling I could do it vs. pretty much impossible kind of thing
+
+2:07 PM
+
+So I cloned the esp-idf repo in the root directory of atomic14's repo so main and esp-idf are same level
+
+I used a .exe installer to do the esp-idf part, that doesn't seem correct
+
+I try to run the ./export.sh shell command says I need to install
+
+Try to run the install shell command, crashes the VS code terminal nice
+
+2:09 PM
+
+Okay I'm gonna try and use powershell to run the install.ps1 as admin, don't know if you need to be admin but I'll do it
+
+Yeah I've seen this error before "running scripts disabled on this system"
+
+2:13 PM
+
+That's installing, this is my hardware setup right now btw, once I get this to work eg. I could call somebody and talk to them on it
+
+I'll actually solder it together along with the switch, boost converter, bms and rechargable battery.
+
+<img src="./devlog-images/wired-up.png"/>
+
+
+
+---
+
 ### 04/09/2026
 
 7:43 PM

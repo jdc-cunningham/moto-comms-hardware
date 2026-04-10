@@ -14,6 +14,7 @@ void setup() {
 
   auto config = i2s.defaultConfig();
   config.pin_bck = BCLK_PIN;
+
   config.pin_ws = LRCK_PIN;
   config.pin_data = DIN_PIN;  
   i2s.begin(config);
