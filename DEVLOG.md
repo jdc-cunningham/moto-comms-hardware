@@ -8,6 +8,34 @@ Tasks
 - [ ] store audio from mic
 - [ ] playback audio
 
+### 04/09/2026
+
+7:43 PM
+
+Doing some research, I'm a bit distracted working on putting Debian 12 on this ASUS Eee PC 900A
+
+So this is still hard... and the thing cannot be button push based
+
+Some terms I've found
+
+bluetooth hands-free profile
+
+esp32 idf
+
+8:19 PM
+
+Damn... we got lucky
+
+https://github.com/atomic14/esp32-hsp-hf
+
+This looks like exactly what I need, this is primarily speech oriented not music so it's okay if it's not amazing sound
+
+It could be made better if it's not much more work
+
+I'm trying to get this done by this weekend and I have to assemble two units which isn't too hard of work
+
+---
+
 ### 04/08/2026
 
 7:52 PM
@@ -29,6 +57,12 @@ https://www.makerguides.com/audio-with-pam8403-pcm5102-and-esp32/
 Nice clear sound damn
 
 I still have to figure out the hands free profile part and I did test the mic connection, I saw a wave form in the serial plotter
+
+I'll remeasure current draw later when the entire thing is put together but right now it was pulling over 100mA
+
+That's 65% volume too from my Surface Book 3
+
+---
 
 ### 04/04/2026
 
