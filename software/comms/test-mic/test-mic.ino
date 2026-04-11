@@ -7,9 +7,9 @@
 // most microphones will probably default to left channel but you may need to tie the L/R pin low
 #define I2S_MIC_CHANNEL I2S_CHANNEL_FMT_ONLY_LEFT
 // either wire your microphone to the same pins or change these to match your wiring
-#define I2S_MIC_SERIAL_CLOCK GPIO_NUM_32
-#define I2S_MIC_LEFT_RIGHT_CLOCK GPIO_NUM_25
-#define I2S_MIC_SERIAL_DATA GPIO_NUM_33
+#define I2S_MIC_SERIAL_CLOCK GPIO_NUM_26
+#define I2S_MIC_LEFT_RIGHT_CLOCK GPIO_NUM_22
+#define I2S_MIC_SERIAL_DATA GPIO_NUM_21
 
 // don't mess around with this
 i2s_config_t i2s_config = {
@@ -37,8 +37,8 @@ void setup()
   // we need serial output for the plotter
   Serial.begin(115200);
   // start up the I2S peripheral
-  i2s_driver_install(I2S_NUM_0, &i2s_config, 0, NULL);
-  i2s_set_pin(I2S_NUM_0, &i2s_mic_pins);
+  i2s_driver_install(I2S_NUM_1, &i2s_config, 0, NULL);
+  i2s_set_pin(I2S_NUM_1, &i2s_mic_pins);
 }
 
 int32_t raw_samples[SAMPLE_BUFFER_SIZE];
@@ -46,11 +46,13 @@ void loop()
 {
   // read from the I2S device
   size_t bytes_read = 0;
-  i2s_read(I2S_NUM_0, raw_samples, sizeof(int32_t) * SAMPLE_BUFFER_SIZE, &bytes_read, portMAX_DELAY);
+  i2s_read(I2S_NUM_1, raw_samples, sizeof(int32_t) * SAMPLE_BUFFER_SIZE, &bytes_read, portMAX_DELAY);
   int samples_read = bytes_read / sizeof(int32_t);
   // dump the samples out to the serial channel.
   for (int i = 0; i < samples_read; i++)
   {
     Serial.printf("%ld\n", raw_samples[i]);
+    // int16_t sample = (int16_t)((raw_samples[i] >> 8) & 0xFFFF);
+    // Serial.println(sample);
   }
 }

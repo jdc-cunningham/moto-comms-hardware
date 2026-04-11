@@ -145,6 +145,46 @@ I'm not sure if that means my wiring is bad or something...
 
 I was expecting this to work like a bluetooth earbud but maybe that's not what HFP is
 
+1:32 PM
+
+Ugh damn... seems I made the wrong thing
+
+I'm not trying to do a phone call
+
+1:37 PM
+
+I think what I'll do is make sure both devices the speaker and mic can work independently (solder wise)
+
+Then I can assemble this thing and then the rest is just changing code/flashing new code
+
+1:45 PM
+
+Speaker is good SBC audio
+
+Need to verify mic works by recording sound
+
+Which I understand now the point of the Atomic14 repo if would have read it, you're trying to record audio on the computer through bluetooth through the HFP
+
+Which I did try that and unfortunately it failed to record so maybe my mic isn't wired right
+
+The mic seems like it's working but I can't prove it, need to recreate sound somehow
+
+2:02 PM
+
+Trying to grab some of these samples and turn it into a wav file
+
+5:38 PM
+
+Sad times... been spending last few hours trying to get audio to play back from the mic
+
+It always sounds terrible
+
+Right now I'm trying to get the audio from the mic through audacity while it's in HFP bluetooth mode as demonstrated by atomic14
+
+I don't have any audio coming from my mic so not sure what's wrong
+
+I just have the mic connected to an esp32 now to avoid issues eg. the speaker being connected is problematic for some reason
+
 ---
 
 ### 04/10/2026
