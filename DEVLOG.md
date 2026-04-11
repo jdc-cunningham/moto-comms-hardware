@@ -349,6 +349,48 @@ I'm still going, battling python 3.9 and setuptools/pkg_resources problem
 
 I'm failing... keep getting this error about needing visual c++ 14 I install it... same
 
+10:21 PM
+
+Still going... I'll commit this entire weekend if that's what it takes
+
+10:31 PM
+
+I also realize I could just run the hf demo on its own maybe get that to work before trying to use the code from atomic14
+
+Damn it's crazy how hard this is
+
+Inspires me to write better documentation on my projects
+
+I mentioned in video the atomic14 repo is like 4-5 years old so... probably problematic anyway to try and reproduce it
+
+10:42 PM
+
+Okay... at this point I think from scratch I know what to do
+
+I've just completely f'd it up with doing random sh
+
+I'm trying to use `idf.py build` when it's supposed to be just `make`
+
+flash command is different too
+
+11:20 PM
+
+About 20 minutes ago I did successfully build it and flash it to my STM32 however... it does not show up on BT scan
+
+The code did work as far as the serial output showing the lettered options/commands eg. "a is SLC something"
+
+What concerned me before was that hardcoded mac address if this is supposed to be "bind anywhere" BT device
+
+11:49 PM
+
+Well it seems the problem is this HAVE_BTSTACK_STDIN is false
+
+Even forcing it to be true/defining it
+
+The BT address is 00...
+
+Need to look into that
+
 ---
 
 ### 04/09/2026
