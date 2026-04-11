@@ -3,6 +3,150 @@ Tasks
 - [ ] get HFP profile working
 - [ ] assemble hardware
 
+### 04/11/2026
+
+Previously on "Guy tries to make a bluetooth headset from knowing nothing"...
+
+AHHHHHHHH
+
+I decided I'm gonna try to build and flash the original hands free demo and see if that works
+
+The problem right now is the atomic14 repo code I got it to build/flash but I can't find the bluetooth device
+
+It seems that btstdin is not running so the mac address is not assigned
+
+I should be able to CD into that project, run the integrate command, set esp32 target, build, flash...
+
+I need to verify the pins but first I need to get an addressable BT interface
+
+Well no integrate should already have happened you do that at the port/esp32 level
+
+11:23 AM
+
+Oh yeah it already has a hardcoded address in the code interesting
+
+11:25 AM
+
+I also was thinking the right way to have done this is to use a container to contain the version stuff and then once the binary or whatever was made, to export it out of the VM to the host to flash it to the STM32
+
+Damn compilation failed... missing #include esp_bt.h
+
+Oh this is neat finally running the menuconfig
+
+Alright I chose dual mode... not sure if that makes sense
+
+I read something in the past about BLE/classic bluetooth
+
+Need to look around in the code to see where the pins are defined
+
+I did not do this menuconfig for the atomic14 code so I'll try that out too if this works
+
+I do like how the speaker/mic is broken out into separate files in that repo
+
+11:36 AM
+
+OMG eveyrtime it gets to the end eg. 1394/1395 I'm like "something is gonna fail"
+
+Yes sir... undefined reference to 'sco_demo_init'
+
+Trying to add `REQUIRES bt` to main/CMakeLists.txt
+
+F same errors "btstack_config.h" can't find that
+
+Will try starting over clean build
+
+11:42 AM
+
+Same problem
+
+11:45 AM
+
+Changed bluetooth settings in menuconfig to be controller only, don't think nimble or bluedroid applies?...
+
+Oh I guess that is relevant
+
+11:54 AM
+
+Fuhhhhhhhhhhhh meeeeee failing
+
+F I keep going in circles in terms of errors
+
+Seems like I have to run the menuconfig after set-target
+
+- $idf.py set-target esp32
+- $idf.py menuconfig (turn bluetooth on)
+- $idf.py build
+
+11:58 AM
+
+Actually since the other one builds... I might try that one too real quick when this one fails
+
+It already has bluetooth enabled damn
+
+12:05 PM
+
+Gonna try using classic mode only BR/EDR
+
+12:14 PM
+
+Oh damn... so it seems I have to push "b" on a keyboard to have it connect and it's the ESP32 connecting to the phone wtf
+
+Why is it made this way
+
+Was looking through this
+
+https://github.com/bluekitchen/btstack/issues/56
+
+12:19 PM
+
+I'm kind of worried this is not going to work the way I think it is
+
+I'm wanting like earbuds, you connect to it, it can record audio on earbud mic and play back audio eg. do a phone call
+
+I'll keep the dual mode bluetooth
+
+I'm going to try and set my phone's BT mac address
+
+The address can't be hardcoded, it should be scanned
+
+I might be using the wrong thing too... there is this HFP Audio Gateway which sounds like what I want vs. the HFP HF
+
+The AG demo has a hardcoded device addr str too
+
+12:31 PM
+
+Whoa I can see it in bluetooth... but why can I see it on my laptop too?
+
+I can holy sh
+
+Your device is ready to go damn
+
+<img src="./devlog-images/connected.png"/>
+
+It's funny I don't even know what I did to get it to work
+
+Let me flash the other one that is connected to speakers/mic
+
+1:11 PM
+
+Damn... I feel like I failed
+
+I built the wrong thing...
+
+So... I have it connected to my phone, I can see serial output on Arduino, it's doing stuff
+
+Switching from mSBC to CVSD sound profile/codec
+
+Got this bluetooth mono streaming app
+
+Everytime I try to output to the device, it comes out of the phone
+
+I'm not sure if that means my wiring is bad or something...
+
+I was expecting this to work like a bluetooth earbud but maybe that's not what HFP is
+
+---
+
 ### 04/10/2026
 
 1:06 PM
