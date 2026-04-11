@@ -309,7 +309,45 @@ and btstack version 1.4.1
 
 Gonna take a break eat a snacky snack
 
+6:27 PM
 
+Ahh damn I forgot I modified some pin mappings I'll need to remember to do that
+
+I really hope this version locking plan works as patching i2s is gonna suck
+
+Crazy I'm still waiting for git clone to finish
+
+6:44 PM
+
+Ugh this git clone is taking forever... I'm losing momentum
+
+7:17 PM
+
+Alright finally downloaded, I'm pretty mentally drained now but I'll work on this while I watch some YT
+
+7:54 PM
+
+Funny in AI summary from Google I saw this command interate_btstack.py and that ran
+
+Maybe that'll fill in the blanks so to speak with the deps and I'm running the atomic14 repo outside of these other deps
+
+8:11 PM
+
+Man I can't even remember if I ran install on ESP-IDF after it was cloned since it took like an hour to run
+
+Also the value was not set right in powershell env var for IDF_PATH
+
+8:29 PM
+
+Ugh... this opened a new problem... old python, pkg_resources problem damn
+
+9:10 PM
+
+I'm still going, battling python 3.9 and setuptools/pkg_resources problem
+
+9:23 PM
+
+I'm failing... keep getting this error about needing visual c++ 14 I install it... same
 
 ---
 
