@@ -1,5 +1,7 @@
 ### About
 
+[Video](https://www.youtube.com/watch?v=aJC0TfJXg98)
+
 <img src="./two.jpg"/>
 
 This is for my friend's project. He's doing the software. Pretty much open source hardware and then software uses cellular to go from user to user.
