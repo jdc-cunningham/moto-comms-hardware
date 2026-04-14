@@ -1,9 +1,9 @@
 #include "AudioTools.h"
 #include "BluetoothA2DPSink.h"
 
-#define DIN_PIN 33   // serial data
-#define LRCK_PIN 32  // word select
-#define BCLK_PIN 25  // serial clock
+#define DIN_PIN 18   // serial data
+#define LRCK_PIN 27  // word select
+#define BCLK_PIN 19  // serial clock
 
 I2SStream i2s;
 BluetoothA2DPSink a2dp_sink(i2s);
@@ -19,7 +19,7 @@ void setup() {
   config.pin_data = DIN_PIN;  
   i2s.begin(config);
 
-  a2dp_sink.start("MyMusic");
+  a2dp_sink.start("MyMusic1");
 }
 
 void loop() { }

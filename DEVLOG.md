@@ -1,7 +1,35 @@
+### 04/13/2026
+
+7:40 PM
+
+I need to take a break from this project.
+
+I bought 3 sets of parts... I put two of them together and delivered them to my friend.
+
+I have to assemble the last one but I figured I would at least make the circuit diagram/make a video.
+
+Even though I technically did not complete the project since I wasn't able to get audio out of the mic that I could play back.
+
+---
+
 Tasks
 
-- [ ] get HFP profile working
-- [ ] assemble hardware
+- [x] get HFP profile working
+- [x] assemble hardware
+
+### 04/12/2026
+
+12:36 PM
+
+Slept in, I want to assemble these boards but I need to prove the mic actually works so far I have not
+
+I mean I think I have as far as seeing a waveform that responds to my voice but I haven't recorded audio/played it back
+
+7:45 PM
+
+Assembled the hardware, brought over to friend's house, not pleased with the HFP not fully working despite being built/flashed
+
+---
 
 ### 04/11/2026
 
