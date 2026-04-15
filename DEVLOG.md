@@ -1,3 +1,9 @@
+- INMP441 notes
+
+I'm not sure if my audio situation could have been improved
+
+Apparently the 3.3V power from ESP32 is noisy so that is something that could be improved... also this idea of calculating RMS... also no automatic gain
+
 ### 04/13/2026
 
 7:40 PM
